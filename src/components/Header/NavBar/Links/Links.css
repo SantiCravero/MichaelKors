@@ -1,0 +1,36 @@
+#links .effect{
+    display: inline-block;
+  font-family: Verdana, sans-serif;
+  text-decoration: none;
+	color: black;
+	font-size: 11px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	position: relative;
+  -webkit-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+  padding: 15px;
+}
+
+#links .effect:after{
+    content: "";
+	position: absolute;
+	height: 1px;
+	background-color: black;
+	width: 0;
+	left: 50%;
+	bottom: 0;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	-webkit-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+  	transition: 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+}
+
+#links .effect:hover {
+	color: black;
+}
+
+#links .effect:hover:after {
+	width: 100%;
+}
