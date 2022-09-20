@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun&display=swap');
 
 body{
   margin: 0;
@@ -10,9 +12,9 @@ body{
   font-family: 'Inter', sans-serif;
 }
 
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 .App-logo {
   height: 40vmin;

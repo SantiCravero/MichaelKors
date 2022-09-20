@@ -5,9 +5,17 @@ import Links from "./Links/Links";
 import User from "./User/User";
 
 function NavBar() {
+
+  function handleScroll(){
+
+    window.addEventListener("scroll", function(){
+			const header = document.querySelector(".fixed");
+			header.classList.toggle("abajo",window.scrollY>0);
+		})}
+
   return (
     <>
-      <nav className="bg-slate-100">
+      <nav onScroll={handleScroll} className="bg-slate-100 fixed w-full z-50">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-20 items-center justify-between">
             <BotonHamburguesa/>

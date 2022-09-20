@@ -1,0 +1,29 @@
+
+		header{
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+			transition: 0.7s;
+			padding: 30px 20px;
+			z-index: 10;
+		}
+		header.abajo{
+			background: #fff;
+			padding: 15px 20px;
+		}
+
+		header.abajo .logo,
+		header.abajo ul li a{
+			color: #000;
+		}
+
+
+	/* <script type="text/javascript">
+		window.addEventListener("scroll", function(){
+			var header = document.querySelector("header");
+			header.classList.toggle("abajo",window.scrollY>0);
+		})
+	</script> */
