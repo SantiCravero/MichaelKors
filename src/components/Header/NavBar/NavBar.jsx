@@ -30,7 +30,7 @@ function NavBar() {
           </div>
         </div>
 
-        <div className="md:hidden space-y-1 px-2 pt-2 pb-3" id="mobile-menu">
+        {/* <div className="md:hidden space-y-1 px-2 pt-2 pb-3" id="mobile-menu">
             <a href="#" className="effect block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Productos</a>
 
             <a href="#" className="effect block px-3 py-2 rounded-md text-base font-medium">Equipo</a>
@@ -38,7 +38,7 @@ function NavBar() {
             <a href="#" className="effect block px-3 py-2 rounded-md text-base font-medium">Sobre Nosotros</a>
 
             <a href="#" className="effect block px-3 py-2 rounded-md text-base font-medium">Contacto</a>
-        </div>
+        </div> */}
       </nav>
     </>
   );

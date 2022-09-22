@@ -1,18 +1,18 @@
 import React from "react";
 import ItemCount from "../ItemCount/ItemCount";
-import "./Card.css";
+import "./Item.css";
 
 function Card({item}) {
   console.log(item)
   return (
-    <div className="card my-4">
+    <div className="card my-6 mx-10">
       <img className="card-img" src={item.img} alt={item.title} />
       <div className="card-info">
-        <p className="text-title">{item.title}</p>
+        <p className="text-title uppercase">{item.title}</p>
         <p className="text-body">Product description and details</p>
       </div>
       <div className="card-footer">
-        <span className="text-title">${item.price}</span>
+        <span className="text-price">${item.price}</span>
         <div className="flex justify-end">
           <ItemCount amount={item.amount} stock={item.stock}/>
           <div className="card-button">
@@ -24,6 +24,7 @@ function Card({item}) {
           </div>
         </div>
       </div>
+        <small>Stock disponible: {item.stock}</small>
     </div>
   );
 }

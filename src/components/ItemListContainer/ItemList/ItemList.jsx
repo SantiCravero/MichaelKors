@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../Card/Card";
+import Card from "../Item/Item";
 
 function ItemList({products}) {
   return products.map((singleProduct) => {
