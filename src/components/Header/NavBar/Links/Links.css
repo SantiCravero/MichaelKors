@@ -2,6 +2,44 @@
     display: inline-block;
   font-family: Verdana, sans-serif;
   text-decoration: none;
+	color: #CA8A04;
+	font-weight: 600;
+	font-size: 11px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	position: relative;
+  -webkit-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+  padding: 10px;
+}
+
+#links .effect:after{
+    content: "";
+	position: absolute;
+	height: 1px;
+	background-color: #8e6202;
+	width: 0;
+	left: 50%;
+	bottom: 0;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	-webkit-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+  	transition: 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+}
+
+#links .effect:hover {
+	color: #8e6202;
+}
+
+#links .effect:hover:after {
+	width: 100%;
+}
+
+#links .effect-cat{
+    display: inline-block;
+  font-family: Verdana, sans-serif;
+  text-decoration: none;
 	color: black;
 	font-size: 11px;
 	letter-spacing: 2px;
@@ -9,10 +47,10 @@
 	position: relative;
   -webkit-transition: all 0.4s ease;
 	transition: all 0.4s ease;
-  padding: 15px;
+  padding:10px  5px;
 }
 
-#links .effect:after{
+#links .effect-cat:after{
     content: "";
 	position: absolute;
 	height: 1px;
@@ -27,10 +65,10 @@
   	transition: 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
 }
 
-#links .effect:hover {
+#links .effect-cat:hover {
 	color: black;
 }
 
-#links .effect:hover:after {
+#links .effect-cat:hover:after {
 	width: 100%;
 }

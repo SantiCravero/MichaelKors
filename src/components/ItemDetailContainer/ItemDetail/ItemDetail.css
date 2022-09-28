@@ -1,5 +1,6 @@
 .relative .grid .imagen{
     height: 500px;
+    margin: auto;
 }
 
 .relative .grid h2{

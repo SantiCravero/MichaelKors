@@ -32,7 +32,7 @@
   background: none;
 }
 
-.texto .cta span {
+.texto .cta a {
   padding-bottom: 7px;
   letter-spacing: 4px;
   font-size: 14px;

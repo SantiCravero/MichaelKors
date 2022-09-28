@@ -1,9 +1,9 @@
 import React from "react";
-import Card from "../Item/Item";
+import Item from "../Item/Item";
 
 function ItemList({products}) {
   return products.map((singleProduct) => {
-    return <Card key={singleProduct.id} item={singleProduct} />;
+    return <Item key={singleProduct.id} item={singleProduct} />;
   });
 }
 

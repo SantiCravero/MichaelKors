@@ -5,17 +5,9 @@ import Links from "./Links/Links";
 import User from "./User/User";
 
 function NavBar() {
-
-  function handleScroll(){
-
-    window.addEventListener("scroll", function(){
-			const header = document.querySelector(".fixed");
-			header.classList.toggle("abajo",window.scrollY>0);
-		})}
-
   return (
-    <>
-      <nav onScroll={handleScroll} className="bg-slate-100 fixed w-full z-50">
+    <>  
+      <nav className="bg-slate-100 fixed w-full z-50">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-20 items-center justify-between">
             <BotonHamburguesa/>
@@ -31,13 +23,13 @@ function NavBar() {
         </div>
 
         {/* <div className="md:hidden space-y-1 px-2 pt-2 pb-3" id="mobile-menu">
-            <a href="#" className="effect block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Productos</a>
+            <Link to="#" className="effect block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Productos</Link>
 
-            <a href="#" className="effect block px-3 py-2 rounded-md text-base font-medium">Equipo</a>
+            <Link to="#" className="effect block px-3 py-2 rounded-md text-base font-medium">Equipo</Link>
 
-            <a href="#" className="effect block px-3 py-2 rounded-md text-base font-medium">Sobre Nosotros</a>
+            <Link to="#" className="effect block px-3 py-2 rounded-md text-base font-medium">Sobre Nosotros</Link>
 
-            <a href="#" className="effect block px-3 py-2 rounded-md text-base font-medium">Contacto</a>
+            <Link to="#" className="effect block px-3 py-2 rounded-md text-base font-medium">Contacto</Link>
         </div> */}
       </nav>
     </>
