@@ -1,15 +1,15 @@
 import "./App.css";
-import NavBar from "./components/Header/NavBar/NavBar";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-
+import Footer from "./components/Footer/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NavBar from "./components/Header/NavBar";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <NavBar />
+        <NavBar/>
         <Routes>
           <Route path="/" element={<ItemListContainer greeting="Explora nuestro catálogo" />}/>
 
@@ -21,6 +21,7 @@ function App() {
             
           }/> */}
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </>
   );

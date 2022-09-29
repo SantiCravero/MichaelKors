@@ -18,7 +18,7 @@ function Item({item}) {
       <div className="card-footer">
         <span className="text-price">${item.price}</span>
         <div className="flex justify-end">
-          <ItemCount amount={item.amount} stock={item.stock}/>
+          {/* <ItemCount amount={item.amount} stock={item.stock}/> */}
           <Link to={urlDetalle}>
             <div className="card-button">
               <svg className="svg-icon" viewBox="0 0 20 20">

@@ -1,9 +1,10 @@
 import React from 'react'
+import ItemCount from '../../ItemListContainer/ItemCount/ItemCount'
 import "./ItemDetail.css"
 
 function ItemDetail({item}) {
   return (
-    <div className="relative flex w-full items-center overflow-hidden bg-white px-4 pt-14 pb-8 shadow-2xl sm:px-6 sm:pt-8 md:p-6 lg:p-8">
+    <div className="relative flex w-full items-center overflow-hidden bg-white px-4 pt-14 pb-8 sm:px-6 sm:pt-8 md:p-6 lg:p-8">
 
             <div className="mt-16 grid w-full grid-cols-1 items-start gap-y-8 gap-x-6 sm:grid-cols-12 lg:gap-x-8">
                 <div className="aspect-w-2 aspect-h-3 overflow-hidden rounded-lg bg-gray-100 sm:col-span-4 lg:col-span-5">
@@ -102,7 +103,10 @@ function ItemDetail({item}) {
                             </div>
                         </div>
 {/* #F4E0AD */}
-                    <button type="submit" className="mt-6 flex w-full items-center justify-center bg-yellow-500 rounded-md border border-transparent py-3 px-8 text-base font-medium text-white hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2">Agregar al carrito</button>
+                    <div className='flex'>
+                      <button type="submit" className="mt-6 flex w-1/2 items-center justify-center bg-yellow-500 rounded-md border border-transparent py-3 px-8 text-base font-medium text-white hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2">Agregar al carrito</button>
+                      <ItemCount amount={item.amount} stock={item.stock}/>
+                    </div>
                     </form>
                     <div className='h-96'></div>
                 </section>

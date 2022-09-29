@@ -1,7 +1,7 @@
-import Logo from "../../Logo/Logo";
 import BotonHamburguesa from "./BotonHamburguesa/BotonHamburguesa";
 import CartWidget from "./CartWidget/CartWidget";
 import Links from "./Links/Links";
+import Logo from "./Logo/Logo";
 import User from "./User/User";
 
 function NavBar() {
@@ -12,7 +12,7 @@ function NavBar() {
           <div className="relative flex h-20 items-center justify-between">
             <BotonHamburguesa/>
             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-              <Logo/> 
+              <Logo/>
               <Links/>
             </div>
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
