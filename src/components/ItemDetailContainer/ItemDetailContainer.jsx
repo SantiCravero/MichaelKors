@@ -14,7 +14,7 @@ function ItemDetailContainer() {
             .then((respuesta) => setProducts(respuesta))
     }, [id])
 
-  return (
+    return (
     <>
       <ItemDetail item={products}/>
     </>     

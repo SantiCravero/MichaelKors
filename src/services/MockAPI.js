@@ -6,7 +6,6 @@ const dataProducts = [
     subtitle: "Relojes para hombre",
     category: "hombres",
     img: "https://content.rolex.com/dam/2022/upright-bba-with-shadow/m126655-0002.png?imwidth=840",
-    amount: 1,
     stock: 8,
     detail: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae necessitatibus dicta minima eligendi incidunt consequuntur nesciunt, et laborum sed veniam iste voluptate in saepe aspernatur eveniet magnam veritatis dolore repellendus!"
   },
@@ -17,7 +16,6 @@ const dataProducts = [
     subtitle: "Relojes para hombre",
     category: "hombres",
     img: "https://content.rolex.com/dam/2022/upright-bba-with-shadow/m126719blro-0002.png?imwidth=840",
-    amount: 1,
     stock: 15,
     detail: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae necessitatibus dicta minima eligendi incidunt consequuntur nesciunt, et laborum sed veniam iste voluptate in saepe aspernatur eveniet magnam veritatis dolore repellendus!"
   },
@@ -28,7 +26,6 @@ const dataProducts = [
     subtitle: "Relojes para mujeres",
     category: "mujeres",
     img: "https://content.rolex.com/dam/2022/upright-bba-with-shadow/m226658-0001.png?imwidth=840",
-    amount: 1,
     stock: 20,
     detail: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae necessitatibus dicta minima eligendi incidunt consequuntur nesciunt, et laborum sed veniam iste voluptate in saepe aspernatur eveniet magnam veritatis dolore repellendus!"
   },
@@ -39,7 +36,6 @@ const dataProducts = [
     subtitle: "Relojes para mujeres",
     category: "mujeres",
     img: "https://content.rolex.com/dam/2022/upright-bba-with-shadow/m126233-0039.png?impolicy=v6-upright&imwidth=840",
-    amount: 1,
     stock: 5,
     detail: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae necessitatibus dicta minima eligendi incidunt consequuntur nesciunt, et laborum sed veniam iste voluptate in saepe aspernatur eveniet magnam veritatis dolore repellendus!"
   },
@@ -50,7 +46,6 @@ const dataProducts = [
     subtitle: "Relojes de oro",
     category: "oro",
     img: "https://content.rolex.com/dam/2022/upright-bba-with-shadow/m126720vtnr-0001.png?impolicy=v6-upright&imwidth=840",
-    amount: 1,
     stock: 12,
     detail: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae necessitatibus dicta minima eligendi incidunt consequuntur nesciunt, et laborum sed veniam iste voluptate in saepe aspernatur eveniet magnam veritatis dolore repellendus!"
   },
@@ -61,7 +56,6 @@ const dataProducts = [
     subtitle: "Relojes de oro",
     category: "oro",
     img: "https://content.rolex.com/dam/2022/upright-bba-with-shadow/m228348rbr-0037.png?impolicy=v6-upright&imwidth=840",
-    amount: 1,
     stock: 3,
     detail: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae necessitatibus dicta minima eligendi incidunt consequuntur nesciunt, et laborum sed veniam iste voluptate in saepe aspernatur eveniet magnam veritatis dolore repellendus!"
   },
@@ -72,7 +66,6 @@ const dataProducts = [
     subtitle: "Relojes de oro",
     category: "oro",
     img: "https://content.rolex.com/dam/2022/upright-bba-with-shadow/m50535-0002.png?impolicy=v6-upright&imwidth=840",
-    amount: 1,
     stock: 7,
     detail: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae necessitatibus dicta minima eligendi incidunt consequuntur nesciunt, et laborum sed veniam iste voluptate in saepe aspernatur eveniet magnam veritatis dolore repellendus!"
   },
@@ -83,7 +76,6 @@ const dataProducts = [
     subtitle: "Relojes para mujeres",
     category: "mujeres",
     img: "https://content.rolex.com/dam/2022/upright-bba-with-shadow/m278274-0035.png?impolicy=v6-upright&imwidth=840",
-    amount: 1,
     stock: 13,
     detail: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae necessitatibus dicta minima eligendi incidunt consequuntur nesciunt, et laborum sed veniam iste voluptate in saepe aspernatur eveniet magnam veritatis dolore repellendus!"
   },

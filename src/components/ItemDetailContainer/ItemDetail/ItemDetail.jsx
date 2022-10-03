@@ -3,6 +3,11 @@ import ItemCount from '../../ItemListContainer/ItemCount/ItemCount'
 import "./ItemDetail.css"
 
 function ItemDetail({item}) {
+
+  function onAddToCart(count){
+    alert(`Agregaste ${count} al carrito`)
+  }
+
   return (
     <div className="relative flex w-full items-center overflow-hidden bg-white px-4 pt-14 pb-8 sm:px-6 sm:pt-8 md:p-6 lg:p-8">
 
@@ -103,12 +108,11 @@ function ItemDetail({item}) {
                             </div>
                         </div>
 {/* #F4E0AD */}
-                    <div className='flex'>
-                      <button type="submit" className="mt-6 flex w-1/2 items-center justify-center bg-yellow-500 rounded-md border border-transparent py-3 px-8 text-base font-medium text-white hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2">Agregar al carrito</button>
-                      <ItemCount amount={item.amount} stock={item.stock}/>
-                    </div>
                     </form>
-                    <div className='h-96'></div>
+                    <div className='flex items-baseline'>
+                      <ItemCount stock={item.stock} onAddToCart={onAddToCart}/>
+                    </div>
+                    {/* <div className='h-52'></div> */}
                 </section>
                 </div>
             </div>

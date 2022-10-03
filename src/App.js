@@ -4,6 +4,7 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import Footer from "./components/Footer/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/Header/NavBar";
+import Error from "./components/Error/Error";
 
 function App() {
   return (
@@ -17,9 +18,7 @@ function App() {
 
           <Route path="/cat/:id" element={<ItemDetailContainer />} />
 
-          {/* <Route path="*" element={
-            
-          }/> */}
+          <Route path="*" element={ <Error/> }/>
         </Routes>
         <Footer/>
       </BrowserRouter>
