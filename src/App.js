@@ -5,23 +5,26 @@ import Footer from "./components/Footer/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/Header/NavBar";
 import Error from "./components/Error/Error";
+import MyProvider from "./context/CartContext";
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <NavBar/>
-        <Routes>
-          <Route path="/" element={<ItemListContainer greeting="Explora nuestro catálogo" />}/>
+      <MyProvider>
+        <BrowserRouter>
+          <NavBar/>
+          <Routes>
+            <Route path="/" element={<ItemListContainer greeting="Explora nuestro catálogo" />}/>
 
-          <Route path="/categoria/:cat" element={<ItemListContainer greeting="Resultado de la búsqueda" />} />
+            <Route path="/categoria/:cat" element={<ItemListContainer greeting="Resultado de la búsqueda" />} />
 
-          <Route path="/cat/:id" element={<ItemDetailContainer />} />
+            <Route path="/cat/:id" element={<ItemDetailContainer />} />
 
-          <Route path="*" element={ <Error/> }/>
-        </Routes>
-        <Footer/>
-      </BrowserRouter>
+            <Route path="*" element={ <Error/> }/>
+          </Routes>
+          <Footer/>
+        </BrowserRouter>
+      </MyProvider>
     </>
   );
 }
