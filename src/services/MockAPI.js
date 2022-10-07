@@ -97,7 +97,7 @@ export function getSingleProduct(idItem) {
     setTimeout(() => {
       if (itemFind) res(itemFind);
       else rej(new Error("item no encontrado"));
-    }, 1500);
+    }, 2000);
   });
 }
 
@@ -107,7 +107,9 @@ export function getProductsByCategory(cat) {
     let itemFind = dataProducts.filter((item) => {
       return item.category === cat;
     });
-    if (itemFind) res(itemFind);
-    else rej(new Error("item no encontrado"));
+    setTimeout(()=>{
+      if (itemFind) res(itemFind);
+      else rej(new Error("item no encontrado"));
+    }, 1500)
   });
 }
