@@ -1,0 +1,53 @@
+/* From uiverse.io by @mrhyddenn */
+.loader {
+    position: relative;
+    transform: scale(2);
+    border-radius: 50%;
+    border: 1px solid;
+    width: 89px;
+    height: 89px;
+    color: #CA8A04;
+  }
+  
+  .loader::after {
+    position: absolute;
+    width: 0px;
+    height: 40px;
+    display: block;
+    border-left: 1px solid #CA8A04;
+    content: '';
+    left: 44px;
+    border-radius: 1px;
+    top: 4px;
+    animation-duration: 1s;
+  }
+  
+  .loader::before {
+    position: absolute;
+    width: 0px;
+    height: 40px;
+    display: block;
+    border-left: 1px solid #CA8A04;
+    content: '';
+    left: 44px;
+    border-radius: 1px;
+    top: 4px;
+    animation-duration: 40s;
+  }
+  
+  .loader::before,.loader::after {
+    transform-origin: bottom;
+    animation-name: dial;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes dial {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }

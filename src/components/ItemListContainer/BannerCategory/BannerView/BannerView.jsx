@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 
 function BannerView(props) {
-    console.log(props)
+    // console.log(props)
     const [bannerShow, setBannerShow] = useState({})
 
     useEffect(() => {

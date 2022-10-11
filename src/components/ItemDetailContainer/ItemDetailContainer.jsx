@@ -3,11 +3,11 @@ import { getSingleProduct } from '../../services/MockAPI'
 import ItemDetail from './ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
 import Error from '../Error/Error'
+import "./ItemDetailContainer.css"
 
 function ItemDetailContainer() {
     const [products, setProducts] = useState({})
     const [error, setError] = useState(false)
-    const [isLoading, setIsLoading] = useState(true)
 
     const { id } = useParams()
 
@@ -16,12 +16,16 @@ function ItemDetailContainer() {
         getSingleProduct(id)
             .then((respuesta) => setProducts(respuesta))
             .catch( (errormsg) => setError(errormsg))
-            .finally(() => setIsLoading(false))
     }, [id])
 
-    if (isLoading) {
+    if (!products.title) {
       return <>
-        {error ? <Error /> : <p className="pt-24">CARGANDO PAA</p>}
+        {error ? ( <Error /> )
+        : (
+          <div className='loading flex items-center justify-center'>
+            <div className='loader'></div>
+          </div> 
+        )}
       </>;
     }
 
