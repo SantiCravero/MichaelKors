@@ -29,7 +29,7 @@ function TotalCart() {
           <span>$ {precioIVA.toFixed(2)}</span>
         </div>
       </div>
-      <div className="flex justify-between my-5 items-center">
+      <div className="flex justify-between my-5 items-center font-semibold">
         <strong className="flex text-2xl">Tu Total</strong>
         <span>$ {precioIVA + getItemPrice()}</span>
       </div>

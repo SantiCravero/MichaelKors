@@ -26,7 +26,7 @@ function ItemDetail({item}) {
                 <section aria-labelledby="information-heading" className="mt-2">
                     <h3 id="information-heading" className="sr-only">Product information</h3>
 
-                    <p className="text-4xl text-yellow-600">${item.price}</p>
+                    <p className="text-4xl text-yellow-600">${(item.price).toFixed(2)}</p>
                     <div className="mt-6">
 
                   <h4 className="sr-only">Reviews</h4>

@@ -53,8 +53,8 @@ function CartView() {
                               <p className='mb-2 text-xs font-semibold'>Cada uno : </p>
                               <span className='text-lg'>$ {item.price.toFixed(2)}</span>
                             </div>
-                            <div className='ml-4'>
-                              <p className='mb-2 text-xs font-semibold'>Total:</p>
+                            <div className='ml-4 font-semibold'>
+                              <p className='mb-2 text-xs'>Total:</p>
                               <span className='text-lg'>$ {(item.price * item.count).toFixed(2)}</span>
                             </div>
                           </div>

@@ -15,7 +15,7 @@ function Item({item}) {
         <p className="text-body">Product description and details</p>
       </div>
       <div className="card-footer">
-        <span className="text-price">${item.price.toFixed(2)}</span>
+        <span className="text-price">${(item.price).toFixed(2)}</span>
         <div className="flex justify-end">
           <Link to={urlDetalle}>
             <div className="card-button">

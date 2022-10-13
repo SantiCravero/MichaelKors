@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { getSingleProduct } from '../../services/MockAPI'
+import { getSingleProduct } from '../../services/firestore'
 import ItemDetail from './ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
 import Error from '../Error/Error'

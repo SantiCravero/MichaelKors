@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import getProducts, { getProductsByCategory } from "../../services/MockAPI";
+import { getProducts, getProductsByCategory } from "../../services/firestore";
 import Banner from "./Banner/Banner";
 import ItemList from "./ItemList/ItemList";
 import { useParams } from "react-router-dom"
@@ -9,7 +9,7 @@ import "./ItemListContainer.css"
 
 function ItemListContainer(props) {
   const [products, setProducts] = useState([]);
-  const [banner, setBanner] = useState(true)
+  const [banner, setBanner] = useState('')
   const [isLoading, setIsLoading] = useState(true)
 
   const { cat } = useParams()
@@ -19,22 +19,24 @@ function ItemListContainer(props) {
     setIsLoading(true)
     
     if(cat === undefined){
+      window.scrollTo({top: 0, left: 0, behavior: "instant"})
       getProducts()
       .then((respuesta) => setProducts(respuesta))
       .finally(() => setIsLoading(false))
-      setBanner(true)  
+      setBanner(true)
     }
     else{
+      window.scrollTo({top: 0, left: 0, behavior: "instant"})
       getProductsByCategory(cat)
       .then((respuesta) => setProducts(respuesta))
       .finally(() => setIsLoading(false))
-      setBanner(false)
+      setBanner(cat)
     }
   }, [cat]);
 
   return (
     <>
-    {banner === true ? <Banner /> : <BannerCategory item={products} />}
+    {banner === true ? <Banner /> : <BannerCategory cat={cat} />}
       {isLoading ? (
         <div className="loading flex items-center justify-center">
           <Ping size={150} lineWeight={3.5} speed={1.5} color="#CA8A04" />
