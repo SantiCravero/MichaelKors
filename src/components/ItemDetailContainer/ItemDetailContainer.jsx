@@ -8,6 +8,7 @@ import "./ItemDetailContainer.css"
 function ItemDetailContainer() {
     const [products, setProducts] = useState({})
     const [error, setError] = useState(false)
+    const [isLoading, setIsLoading] = useState(true)
 
     const { id } = useParams()
 
@@ -16,9 +17,10 @@ function ItemDetailContainer() {
         getSingleProduct(id)
             .then((respuesta) => setProducts(respuesta))
             .catch( (errormsg) => setError(errormsg))
+            .finally(() => setIsLoading(false))
     }, [id])
 
-    if (!products.title) {
+    if (isLoading) {
       return <>
         {error ? ( <Error /> )
         : (

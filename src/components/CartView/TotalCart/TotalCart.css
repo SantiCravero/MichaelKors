@@ -1,0 +1,12 @@
+@media all and (max-width: 1172px){
+    .resumen{
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media all and (max-width: 1024px){
+    .resumen{
+        margin: 1rem;
+    }
+}

@@ -79,7 +79,7 @@ function Footer() {
             <Link to="#" className='hover:border-b hover:border-gray-400'>Defensa al consumidor</Link>
             <Link to="#" className='hover:border-b hover:border-gray-400'>Botón de arrepentimiento</Link>
         </div>
-        </footer>
+    </footer>
     </>
   )
 }

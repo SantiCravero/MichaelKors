@@ -42,7 +42,21 @@ function MyProvider({children}){
         return cart.reduce((acc, x ) => acc += x.price * x.count, 0)
     }
 
-    return <Provider value={{cart, isInCart, addItem, emptyCart, deleteItem, getTotalItemInCart, getItemPrice}}>{children}</Provider>
+    return (
+      <Provider
+        value={{
+          cart,
+          isInCart,
+          addItem,
+          emptyCart,
+          deleteItem,
+          getTotalItemInCart,
+          getItemPrice,
+        }}
+      >
+        {children}
+      </Provider>
+    );
 }
 
 export default MyProvider

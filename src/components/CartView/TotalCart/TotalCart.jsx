@@ -2,15 +2,24 @@ import React, { useContext } from "react";
 import { CartContext } from "../../../context/CartContext";
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
+import { useNavigate } from "react-router-dom";
+import "./TotalCart.css"
 
 function TotalCart() {
+
+  const navigate = useNavigate()
 
   const { getTotalItemInCart, getItemPrice, emptyCart } = useContext(CartContext);
 
   let precioIVA = (getItemPrice() * 0.21)
+  let totalConIva = (precioIVA + getItemPrice())
+
+  function goToPay(){
+    navigate(`/checkout/pay`)
+  }
 
   return (
-    <div className="container w-3/12 bg-gray-100 rounded-sm m-6 p-6">
+    <div className="container resumen w-3/12 bg-gray-100 rounded-sm m-6 p-6 h-full">
       <div>
         <h2 className="font-semibold">Resumen del pedido</h2>
         <div className="flex">
@@ -30,10 +39,10 @@ function TotalCart() {
         </div>
       </div>
       <div className="flex justify-between my-5 items-center font-semibold">
-        <strong className="flex text-2xl">Tu Total</strong>
-        <span>$ {precioIVA + getItemPrice()}</span>
+        <strong className="flex text-xl">Tu Total</strong>
+        <span>$ {totalConIva.toFixed(2)}</span>
       </div>
-      <button className="bg-black text-white hover:scale-105 transition-all text-center py-4 px-5 w-full flex justify-between rounded-md ">
+      <button onClick={goToPay} className="bg-black text-white hover:scale-105 transition-all text-center py-4 px-5 w-full flex justify-between rounded-md ">
         Pagar
         <LocalMallOutlinedIcon />
       </button>

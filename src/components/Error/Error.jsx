@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import "./Error.css"
 
 function Error() {
+  window.scrollTo({top: 0, left: 0, behavior: "instant"})
   return (
     <div className="fondo flex justify-center items-center">
         <div className='text-center'>

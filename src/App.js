@@ -7,6 +7,8 @@ import NavBar from "./components/Header/NavBar";
 import Error from "./components/Error/Error";
 import MyProvider from "./context/CartContext";
 import CartView from "./components/CartView/CartView";
+import CheckOutForm from "./components/CheckOut/CheckOutForm/CheckOutForm";
+import CheckOut from "./components/CheckOut/CheckOut";
 
 function App() {
   return (
@@ -20,6 +22,9 @@ function App() {
             <Route path="/categoria/:cat" element={<ItemListContainer greeting="Resultado de la búsqueda" />} />
             <Route path="/cat/:id" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<CartView />} />
+
+            <Route path="/checkout/pay" element={<CheckOutForm />} />
+            <Route path="/checkout/:orderid" element={<CheckOut />}/>
 
             <Route path="*" element={ <Error/> }/>
             

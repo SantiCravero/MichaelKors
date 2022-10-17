@@ -19,7 +19,8 @@ function CartView() {
   }
 
   return (
-    <div className='cart pt-20'>
+    <div className='cart pt-20 flex flex-wrap'>
+      <div className='centrar'>
         {cart.map((item) => (
           <div key={item.id} className='cardCart flex flex-wrap my-3'> 
             <div className="mt-8 w-full">
@@ -66,6 +67,7 @@ function CartView() {
               </div>
           </div>
         ))}
+      </div>
         <TotalCart />
     </div>
   )
