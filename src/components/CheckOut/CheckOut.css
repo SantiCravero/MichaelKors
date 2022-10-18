@@ -1,3 +1,22 @@
-.checkout{
-    height: 88vh;
+/* .checkout{
+    height: 90vh;
+} */
+
+.inicio{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.advertencia{
+    font-size: .7rem;
+}
+
+.cuadro{
+    width: 70%;
+    margin: auto;
+}
+
+@media all and (max-width: 768px){
+    .cuadro{
+        width: 100%;
+    }
 }

@@ -27,10 +27,12 @@ function CheckOutForm() {
       date: new Date(),
       total: totalConIva,
     }
-    createBuyOrder(orderData)
-      .then((orderid) => {
-        navigate(`/checkout/${orderid}`)
-      })
+    if(dataForm && cart !== 0){
+      createBuyOrder(orderData)
+        .then((orderid) => {
+          navigate(`/checkout/${orderid}`)
+        })
+    }
   }
 
   function inputChangeHandler(event){
@@ -160,10 +162,6 @@ function CheckOutForm() {
                     <dt className="text-sm">Subtotal</dt>
                     <dd className="text-sm font-medium text-gray-900">$ {getItemPrice().toFixed(2)}</dd>
                   </div>
-                  {/* <div className="flex items-center justify-between">
-                    <dt className="text-sm">Shipping</dt>
-                    <dd className="text-sm font-medium text-gray-900">$5.00</dd>
-                  </div> */}
                   <div className="flex items-center justify-between">
                     <dt className="text-sm">I.V.A</dt>
                     <dd className="text-sm font-medium text-gray-900">$ {precioIVA.toFixed(2)}</dd>
@@ -175,7 +173,7 @@ function CheckOutForm() {
                 </dl>
 
                 <div className="border-t border-gray-200 py-6 px-4 sm:px-6">
-                  <button type="submit" className="w-full bg-yellow-500 border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500">Finalizar Compra </button>
+                  <button type="submit" className="w-full bg-yellow-500 border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-yellow-500">Finalizar Compra </button>
                 </div>
               </div>
             </div>
