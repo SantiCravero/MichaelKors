@@ -1,0 +1,36 @@
+.fondo {
+  height: 18rem; 
+  z-index: -100;
+}
+
+.textoBanner{
+    font-family: 'Noto Serif Georgian', serif;
+}
+
+@media all and (max-width: 1172px){
+    .textoBanner{
+        font-size: 4rem;
+    }
+}
+
+@media all and (max-width: 768px){
+    .textoBanner{
+        font-size: 3.3rem;
+    }
+}
+
+@media all and (max-width: 425px){
+    .textoBanner{
+        font-size: 2.8rem;
+    }
+}
+
+.vendidos{
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media all and (max-width: 768px){
+    .divVendidos{
+        width: 100%;
+    }
+}

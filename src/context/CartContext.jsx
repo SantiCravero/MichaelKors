@@ -9,8 +9,8 @@ function MyProvider({children}){
 
     function isInCart(id){
         return cart.some(item => item.id === id)
-    }   
-    
+    }
+
     function addItem(item, count){
         const newItem = {...item, count}
         
@@ -42,6 +42,10 @@ function MyProvider({children}){
         return cart.reduce((acc, x ) => acc += x.price * x.count, 0)
     }
 
+    function addInput(form){
+        return form
+    }
+    
     return (
       <Provider
         value={{
@@ -52,6 +56,7 @@ function MyProvider({children}){
           deleteItem,
           getTotalItemInCart,
           getItemPrice,
+          addInput,
         }}
       >
         {children}

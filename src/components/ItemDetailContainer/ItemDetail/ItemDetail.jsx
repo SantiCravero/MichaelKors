@@ -1,23 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { CartContext } from '../../../context/CartContext'
 import ItemCount from '../../ItemListContainer/ItemCount/ItemCount'
 import "./ItemDetail.css"
 
 function ItemDetail({item}) {
 
+  const [isInCart, setIsInCart] = useState(false)
+
   const { addItem } = useContext(CartContext)
 
   function onAddToCart(count){
-    addItem(item, count)    
+    addItem(item, count)
+    setIsInCart(true)
   }
+
+  useEffect(()=>{
+    window.scrollTo({top: 0, left: 0, behavior: "instant"})
+  },[])
 
   return (
     <div className="relative flex w-full items-center overflow-hidden bg-white px-4 pt-14 pb-8 sm:px-6 sm:pt-8 md:p-6 lg:p-8">
 
             <div className="mt-16 grid w-full grid-cols-1 items-start gap-y-8 gap-x-6 sm:grid-cols-12 lg:gap-x-8">
                 <div className="aspect-w-2 aspect-h-3 overflow-hidden rounded-lg bg-gray-100 sm:col-span-4 lg:col-span-5">
-                <img src={item.img} alt={item.title} className="imagen object-cover object-center"/>
+                  <img src={item.img} alt={item.title} className="imagen object-cover object-center"/>
                 </div>
                 <div className="div sm:col-span-8 lg:col-span-7">
                   <h5 className='text-gray-400 uppercase text-sm'>{item.subtitle}</h5>
@@ -65,7 +73,7 @@ function ItemDetail({item}) {
 
                 <section aria-labelledby="options-heading" className="mt-10">
                     <h3 id="options-heading" className="sr-only">Product options</h3>
-                    {/* COLOR */}
+                    {/* TALLE Y COLOR */}
                     <form>
                         <div className='flex items-center'>
                             <div className='mr-14'>
@@ -74,16 +82,30 @@ function ItemDetail({item}) {
                                 <fieldset className="mt-4">
                                 <span className="flex items-center space-x-3">
 
-                                    <label className="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 bg-white shadow-sm text-gray-900 cursor-pointer">
-                                    <span id="size-choice-0-label">S</span>
-                                    </label>
-
-                                    <label className="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 bg-white shadow-sm text-gray-900 cursor-pointer">
+                                    <label className="h-12 w-12 ring-2 ring-yellow-500 group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 bg-white shadow-sm text-gray-900 cursor-pointer">
                                     <span id="size-choice-0-label">M</span>
                                     </label>
 
-                                    <label className="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 bg-white shadow-sm text-gray-900 cursor-pointer">
-                                    <span id="size-choice-0-label">L</span>
+                                    <label className="h-12 w-12 text-sm group relative border rounded-md py-3 px-4 flex items-center justify-center font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-gray-50 text-gray-200 cursor-not-allowed">
+                                      <input type="radio" name="size-choice" value="XXS" disabled className="sr-only" aria-labelledby="size-choice-0-label"/>
+                                      <p id="size-choice-0-label">L</p>
+
+                                      <div aria-hidden="true" className="absolute -inset-px rounded-md border-2 border-gray-200 pointer-events-none">
+                                        <svg className="absolute inset-0 w-full h-full text-gray-200 stroke-2" viewBox="0 0 100 100" preserveAspectRatio="none" stroke="currentColor">
+                                          <line x1="0" y1="100" x2="100" y2="0" vectorEffect="non-scaling-stroke" />
+                                        </svg>
+                                      </div>
+                                    </label>
+
+                                    <label className="h-12 w-12 text-sm group relative border rounded-md py-3 px-4 flex items-center justify-center font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-gray-50 text-gray-200 cursor-not-allowed">
+                                      <input type="radio" name="size-choice" value="XXS" disabled className="sr-only" aria-labelledby="size-choice-0-label"/>
+                                      <p id="size-choice-0-label">XL</p>
+
+                                      <div aria-hidden="true" className="absolute -inset-px rounded-md border-2 border-gray-200 pointer-events-none">
+                                        <svg className="absolute inset-0 w-full h-full text-gray-200 stroke-2" viewBox="0 0 100 100" preserveAspectRatio="none" stroke="currentColor">
+                                          <line x1="0" y1="100" x2="100" y2="0" vectorEffect="non-scaling-stroke" />
+                                        </svg>
+                                      </div>
                                     </label>
                                 </span>
                                 </fieldset>
@@ -96,27 +118,44 @@ function ItemDetail({item}) {
                                 <legend className="sr-only">Elije un color</legend>
                                 <span className="flex items-center space-x-3">
 
-                                    <label className="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400">
+                                    <label className="-m-0.5 relative ring-2 ring-yellow-500 p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none">
                                     <span aria-hidden="true" className="h-8 w-8 bg-yellow-400 hover:opacity-60 border border-black border-opacity-10 rounded-full"></span>
                                     </label>
 
-                                    <label className="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400">
-                                    <span aria-hidden="true" className="h-8 w-8 bg-gray-400 hover:opacity-60 border border-black border-opacity-10 rounded-full"></span>
+                                    <label className="bg-gray-400 h-9 w-9 -m-0.5 relative p-0.5 rounded-full flex items-center justify-center focus:outline-none ring-gray-900 cursor-not-allowed">
+                                      <div aria-hidden="true" className="rounded-full absolute -inset-px border-2 border-gray-300 pointer-events-none">
+                                        <svg className="rounded-full absolute inset-0 w-full h-full text-gray-300 stroke-2" viewBox="0 0 100 100" preserveAspectRatio="none" stroke="currentColor">
+                                          <line x1="0" y1="100" x2="100" y2="0" vectorEffect="non-scaling-stroke" />
+                                        </svg>
+                                      </div>
                                     </label>
 
-                                    <label className="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-900">
-                                    <span aria-hidden="true" className="h-8 w-8 bg-gray-900 hover:opacity-60 border border-black border-opacity-10 rounded-full"></span>
+                                    <label className="bg-black h-9 w-9 -m-0.5 relative p-0.5 rounded-full flex items-center justify-center focus:outline-none ring-gray-900 cursor-not-allowed">
+                                      <div aria-hidden="true" className="rounded-full absolute -inset-px border-2 border-gray-300 pointer-events-none">
+                                        <svg className="rounded-full absolute inset-0 w-full h-full text-gray-300 stroke-2" viewBox="0 0 100 100" preserveAspectRatio="none" stroke="currentColor">
+                                          <line x1="0" y1="100" x2="100" y2="0" vectorEffect="non-scaling-stroke" />
+                                        </svg>
+                                      </div>
                                     </label>
+
                                 </span>
                                 </fieldset>
                             </div>
                         </div>
-{/* #F4E0AD */}
                     </form>
                     <div className='flex items-baseline'>
-                      <ItemCount stock={item.stock} onAddToCart={onAddToCart}/>
+                      {
+                        isInCart ? (
+                          <Link to="/cart" className='w-full'>
+                            <button type="submit" className="mt-6 flex w-full items-center justify-center bg-yellow-500 rounded-md border border-transparent py-3 px-8 text-base font-medium text-white hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2">
+                              Ir al carrito
+                            </button>
+                          </Link>
+                        ) : (
+                          <ItemCount stock={item.stock} onAddToCart={onAddToCart}/>
+                        )
+                      }
                     </div>
-                    {/* <div className='h-52'></div> */}
                 </section>
                 </div>
             </div>

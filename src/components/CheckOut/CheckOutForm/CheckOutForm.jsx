@@ -1,12 +1,15 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { CartContext } from '../../../context/CartContext'
 import { createBuyOrder } from '../../../services/firestore'
+import NoProducts from '../../CartView/NoProducts/NoProducts'
 
 function CheckOutForm() {
 
   const navigate = useNavigate()
+
+  const { cart, getItemPrice, deleteItem, addInput } = useContext(CartContext)
 
   const [dataForm, setDataForm] = useState({
     email: "",
@@ -33,6 +36,11 @@ function CheckOutForm() {
           navigate(`/checkout/${orderid}`)
         })
     }
+    console.log(orderData)
+  }
+
+  function onInputHandler(){
+    addInput(dataForm)
   }
 
   function inputChangeHandler(event){
@@ -44,16 +52,27 @@ function CheckOutForm() {
     setDataForm(newDataForm)
   }
 
-  const { cart, getItemPrice, deleteItem } = useContext(CartContext)
   
   let precioIVA = (getItemPrice() * 0.21)
   let totalConIva = (precioIVA + getItemPrice())
+
+  useEffect(()=>{
+    window.scrollTo({top: 0, left: 0, behavior: "instant"})
+  },[])
+
+  if (cart.length === 0) {
+    return (
+      <div className='pt-20'>
+        <NoProducts />
+      </div>
+    ) 
+  }
 
   return (
     <div className='pt-20'>
       <div className="bg-gray-50">
         <div className="max-w-2xl mx-auto pt-8 pb-24 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-          <form onSubmit={handleChekout} className="lg:grid lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16">
+          <form onClick={onInputHandler} onSubmit={handleChekout} className="lg:grid lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16">
             <div>
 
               {/* INFORACION DE CONTACTO (EMAIL DE CONTACTO) */}

@@ -21,8 +21,8 @@ function TotalCart() {
   return (
     <div className="container resumen w-3/12 bg-gray-100 rounded-sm m-6 p-6 h-full">
       <div>
-        <h2 className="font-semibold">Resumen del pedido</h2>
-        <div className="flex">
+        <h2 className="text-xl">Resumen del pedido</h2>
+        <div className="flex my-2">
           <ShoppingBagOutlinedIcon sx={{ fontSize: 18 }} />
           <small className="mx-1">{getTotalItemInCart()} artículos</small>
         </div>
@@ -47,7 +47,7 @@ function TotalCart() {
         <LocalMallOutlinedIcon />
       </button>
       <div className="flex flex-col text-center mt-3">
-        <small>or</small>
+        <small>o</small>
         <button onClick={emptyCart} className="mt-1 text-sm text-yellow-600 hover:underline">Vaciar carrito</button>
       </div>
     </div>

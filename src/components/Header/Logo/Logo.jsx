@@ -11,12 +11,12 @@ function Logo() {
     <div className="flex flex-shrink-0 items-center">
       <Link to="/" onClick={goBackToHome}>
       <img
-        className="hover:scale-105 ease-in-out duration-300 block h-8 w-64 lg:hidden"
-        src="/assets/MichaelKors.png"
+        className="hover:scale-105 ease-in-out duration-300 block h-16 w-36 md:hidden"
+        src="/assets/MK.png"
         alt="Your Company"
       />
       <img
-        className="hover:scale-105 ease-in-out duration-300 hidden h-8 w-64 lg:block"
+        className="hover:scale-105 ease-in-out duration-300 hidden h-8 w-64 md:block"
         src="/assets/MichaelKors.png"
         alt="Your Company"
       /></Link>
