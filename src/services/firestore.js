@@ -64,7 +64,7 @@ export async function createBuyOrder(orderData){
   let respuesta = await addDoc(collectionRef, orderData)
 
   // este seria el numero de ticket de tu compra
-  return respuesta.id
+  return respuesta
 }
 
 

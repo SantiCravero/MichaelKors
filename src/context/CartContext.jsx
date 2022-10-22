@@ -5,6 +5,7 @@ const { Provider } = CartContext
 
 function MyProvider({children}){
     const [cart, setCart] = useState([])
+    const [checkout, setChekout] = useState({})
 
 
     function isInCart(id){
@@ -43,7 +44,9 @@ function MyProvider({children}){
     }
 
     function addInput(form){
-        return form
+        setChekout(form)
+        // console.log(form)    
+        return checkout
     }
     
     return (

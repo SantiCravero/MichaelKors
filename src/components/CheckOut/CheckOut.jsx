@@ -1,19 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import "./CheckOut.css";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function CheckOut() {
   
-  const { emptyCart, addInput } = useContext(CartContext)
+  const { emptyCart, addInput, checkout } = useContext(CartContext)
+
+  const { orderid } = useParams()
+
+  const [context, setContext] = useState({})
 
   useEffect(()=>{
     window.scrollTo({top: 0, left: 0, behavior: "instant"})
     emptyCart()
-    console.log(addInput)
-  },[])
 
+    setContext(addInput())
+    console.log(context)
+  },[])
 
   return (
     <div className="pt-20 checkout">
@@ -35,7 +40,7 @@ function CheckOut() {
                     <dt className="text-sm">N° de pedido</dt>
                     <small className="advertencia">No lo pierdas, en caso de algun inconveniente se lo solicitará</small>
                   </div>
-                  <dd className="text-sm font-medium text-gray-900">ERIU4RU3EQWODJ</dd>
+                  <dd className="text-sm font-medium text-gray-900">{orderid}</dd>
                 </div>
               </dl>
               <dl className="border-t border-gray-200 py-6 px-4 space-y-6 sm:px-6">

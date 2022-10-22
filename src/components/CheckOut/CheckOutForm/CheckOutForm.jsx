@@ -33,14 +33,10 @@ function CheckOutForm() {
     if(dataForm && cart !== 0){
       createBuyOrder(orderData)
         .then((orderid) => {
-          navigate(`/checkout/${orderid}`)
+          navigate(`/checkout/${orderid.id}`)
         })
-    }
-    console.log(orderData)
-  }
-
-  function onInputHandler(){
-    addInput(dataForm)
+      }
+      addInput(orderData)
   }
 
   function inputChangeHandler(event){
@@ -60,19 +56,19 @@ function CheckOutForm() {
     window.scrollTo({top: 0, left: 0, behavior: "instant"})
   },[])
 
-  if (cart.length === 0) {
-    return (
-      <div className='pt-20'>
-        <NoProducts />
-      </div>
-    ) 
-  }
+  // if (cart.length === 0) {
+  //   return (
+  //     <div className='pt-20'>
+  //       <NoProducts />
+  //     </div>
+  //   ) 
+  // }
 
   return (
     <div className='pt-20'>
       <div className="bg-gray-50">
         <div className="max-w-2xl mx-auto pt-8 pb-24 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-          <form onClick={onInputHandler} onSubmit={handleChekout} className="lg:grid lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16">
+          <form onSubmit={handleChekout} className="lg:grid lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16">
             <div>
 
               {/* INFORACION DE CONTACTO (EMAIL DE CONTACTO) */}
