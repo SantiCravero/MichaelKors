@@ -61,7 +61,7 @@ function ItemDetail({item}) {
                       </svg>
                     </div>
                     <p className="sr-only">3.9 out of 5 stars</p>
-                    <a href="#" className="ml-3 text-sm font-medium text-yellow-600 hover:text-yellow-500">117 reviews</a>
+                    <Link to="#" className="ml-3 text-sm font-medium text-yellow-600 hover:text-yellow-500">117 reviews</Link>
                   </div>
                 </div>
                     <hr className='my-4'></hr>
@@ -73,7 +73,6 @@ function ItemDetail({item}) {
 
                 <section aria-labelledby="options-heading" className="mt-10">
                     <h3 id="options-heading" className="sr-only">Product options</h3>
-                    {/* TALLE Y COLOR */}
                     <form>
                         <div className='flex items-center'>
                             <div className='mr-14'>

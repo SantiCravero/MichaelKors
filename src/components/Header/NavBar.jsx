@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import BotonHamburguesa from "./BotonHamburguesa/BotonHamburguesa";
 import CartWidget from "./CartWidget/CartWidget";
 import Links from "./Links/Links";
@@ -22,19 +21,6 @@ function NavBar() {
             </div>
           </div>
         </div>
-
-        {/* <div className="xl:hidden space-y-1 px-2 pt-2 pb-3" id="mobile-menu">
-          <Link to="/categoria/hombres" className='effect-cat block px-3 py-2 rounded-md text-base font-medium' aria-current="page">Hombres</Link>
-          <Link to="/categoria/mujeres" className='effect-cat block px-3 py-2 rounded-md text-base font-medium' aria-current="page">Mujeres</Link>
-          <Link to="/categoria/oro" className='effect-cat block px-3 py-2 rounded-md text-base font-medium' aria-current="page">Oro</Link>
-
-          <Link to="#" className='effect block px-3 py-2 rounded-md text-base font-medium'>Equipo</Link>
-
-          <Link to="#" className='effect block px-3 py-2 rounded-md text-base font-medium'>Sobre Nosotros</Link>
-
-          <Link to="#" className='effect block px-3 py-2 rounded-md text-base font-medium'>Contacto</Link>
-            
-        </div> */}
       </nav>
     </>
   );

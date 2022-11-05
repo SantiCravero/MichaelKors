@@ -3,22 +3,23 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import "./CheckOut.css";
 import { Link, useParams } from "react-router-dom";
+import { getSingleOrder } from "../../services/firestore";
 
 function CheckOut() {
   
-  const { emptyCart, addInput, checkout } = useContext(CartContext)
-
+  const { emptyCart } = useContext(CartContext)
   const { orderid } = useParams()
 
-  const [context, setContext] = useState({})
+  const [orderData, setOrderData] = useState([])
 
-  useEffect(()=>{
-    window.scrollTo({top: 0, left: 0, behavior: "instant"})
-    emptyCart()
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    emptyCart();
 
-    setContext(addInput())
-    console.log(context)
-  },[])
+    getSingleOrder(orderid).then((respuestaDatos) =>
+      setOrderData(respuestaDatos)
+    );
+  }, [orderid]);
 
   return (
     <div className="pt-20 checkout">
@@ -27,9 +28,15 @@ function CheckOut() {
           <div className="my-10 lg:mt-0">
             <div className="text-center pb-8">
               <Link to="/" className="inline-flex">
-                <img className="h-20 w-auto" src="/assets/MK.png" alt="Michael Kors" />
+                <img
+                  className="h-20 w-auto"
+                  src="/assets/MK.png"
+                  alt="Michael Kors"
+                />
               </Link>
-              <h1 className="mt-2 text-4xl font-extrabold text-gray-900 tracking-tight ">Gracias por tu compra!</h1>
+              <h1 className="mt-2 text-4xl font-extrabold text-gray-900 tracking-tight ">
+                Gracias por tu compra!
+              </h1>
               <small>Nos contactaremos con vos en la brevedad.</small>
             </div>
 
@@ -38,21 +45,32 @@ function CheckOut() {
                 <div className="flex items-center justify-between">
                   <div>
                     <dt className="text-sm">N° de pedido</dt>
-                    <small className="advertencia">No lo pierdas, en caso de algun inconveniente se lo solicitará</small>
+                    <small className="advertencia">
+                      No lo pierdas, en caso de algun inconveniente se lo
+                      solicitará
+                    </small>
                   </div>
-                  <dd className="text-sm font-medium text-gray-900">{orderid}</dd>
+                  <dd className="text-sm font-medium text-gray-900">
+                    {orderid}
+                  </dd>
+                </div>
+              </dl>
+              <dl className="border-t border-gray-200 py-6 px-4 space-y-6 sm:px-6">
+                <div className="flex items-center justify-between">
+                  <dt className="text-sm">Compraste:</dt>
+                  <dd className="text-sm font-medium text-gray-900">
+                    {orderData.items && orderData.items.map((item) => (
+                      <span key={item.id}>{item.title}</span>
+                    ))}
+                  </dd>
                 </div>
               </dl>
               <dl className="border-t border-gray-200 py-6 px-4 space-y-6 sm:px-6">
                 <div className="flex items-center justify-between">
                   <dt className="text-sm">Total</dt>
-                  <dd className="text-sm font-medium text-gray-900">$ </dd>
-                </div>
-              </dl>
-              <dl className="border-t border-gray-200 py-6 px-4 space-y-6 sm:px-6">
-                <div className="flex items-center justify-between">
-                  <dt className="text-sm">Enviado a:</dt>
-                  <dd className="text-sm font-medium text-gray-900"> Direccion de la casa </dd>
+                  <dd className="text-sm font-medium text-gray-900">
+                    $ {orderData.total}
+                  </dd>
                 </div>
               </dl>
             </div>

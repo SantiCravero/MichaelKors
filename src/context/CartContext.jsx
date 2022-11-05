@@ -5,8 +5,6 @@ const { Provider } = CartContext
 
 function MyProvider({children}){
     const [cart, setCart] = useState([])
-    const [checkout, setChekout] = useState({})
-
 
     function isInCart(id){
         return cart.some(item => item.id === id)
@@ -42,12 +40,6 @@ function MyProvider({children}){
     function getItemPrice(){
         return cart.reduce((acc, x ) => acc += x.price * x.count, 0)
     }
-
-    function addInput(form){
-        setChekout(form)
-        // console.log(form)    
-        return checkout
-    }
     
     return (
       <Provider
@@ -59,7 +51,6 @@ function MyProvider({children}){
           deleteItem,
           getTotalItemInCart,
           getItemPrice,
-          addInput,
         }}
       >
         {children}

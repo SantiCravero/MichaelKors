@@ -9,7 +9,7 @@ function CheckOutForm() {
 
   const navigate = useNavigate()
 
-  const { cart, getItemPrice, deleteItem, addInput } = useContext(CartContext)
+  const { cart, getItemPrice, deleteItem } = useContext(CartContext)
 
   const [dataForm, setDataForm] = useState({
     email: "",
@@ -36,7 +36,6 @@ function CheckOutForm() {
           navigate(`/checkout/${orderid.id}`)
         })
       }
-      addInput(orderData)
   }
 
   function inputChangeHandler(event){
@@ -56,13 +55,13 @@ function CheckOutForm() {
     window.scrollTo({top: 0, left: 0, behavior: "instant"})
   },[])
 
-  // if (cart.length === 0) {
-  //   return (
-  //     <div className='pt-20'>
-  //       <NoProducts />
-  //     </div>
-  //   ) 
-  // }
+  if (cart.length === 0) {
+    return (
+      <div className='pt-20'>
+        <NoProducts />
+      </div>
+    ) 
+  }
 
   return (
     <div className='pt-20'>
@@ -71,7 +70,6 @@ function CheckOutForm() {
           <form onSubmit={handleChekout} className="lg:grid lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16">
             <div>
 
-              {/* INFORACION DE CONTACTO (EMAIL DE CONTACTO) */}
               <div>
                 <h2 className="text-lg font-medium text-gray-900">Informacion de Contacto</h2>
 
@@ -83,7 +81,6 @@ function CheckOutForm() {
                 </div>
               </div>
 
-              {/* INFORMACION PARA EL SHIPPING  */}
               <div className="mt-10 border-t border-gray-200 pt-10">
                 <h2 className="text-lg font-medium text-gray-900">Información de envío</h2>
 
@@ -133,7 +130,6 @@ function CheckOutForm() {
               </div>
             </div>
 
-              {/* ORDEN QUE DETALLA TODO */}
             <div className="mt-10 lg:mt-0">
               <h2 className="text-lg font-medium text-gray-900">Resumen del pedido</h2>
 

@@ -21,7 +21,7 @@ function CartView() {
 
   return (
     <>
-      <div className='cart pt-20 flex flex-wrap'>
+      <div className='cart pt-20 flex flex-wrap justify-evenly'>
         <div className='centrar'>
           {cart.map((item) => (
             <div key={item.id} className='cardCart flex flex-wrap my-3'> 
