@@ -60,7 +60,7 @@ function CheckOut() {
                   <dt className="text-sm">Compraste:</dt>
                   <dd className="text-sm font-medium text-gray-900">
                     {orderData.items && orderData.items.map((item) => (
-                      <span key={item.id}>{item.title}</span>
+                      <span key={item.id}>{item.title} </span>
                     ))}
                   </dd>
                 </div>

@@ -64,7 +64,7 @@ function CheckOutForm() {
   }
 
   return (
-    <div className='pt-20'>
+    <div className='pt-16'>
       <div className="bg-gray-50">
         <div className="max-w-2xl mx-auto pt-8 pb-24 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
           <form onSubmit={handleChekout} className="lg:grid lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16">

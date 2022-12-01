@@ -9,6 +9,8 @@ import MyProvider from "./context/CartContext";
 import CartView from "./components/CartView/CartView";
 import CheckOutForm from "./components/CheckOut/CheckOutForm/CheckOutForm";
 import CheckOut from "./components/CheckOut/CheckOut";
+import SingIn from "./components/SingIn/SingIn";
+import Opportunities from "./components/Opportunities/Opportunities";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <NavBar/>
           <Routes>
 
+            <Route path="/singin" element={ <SingIn /> }/>
+            <Route path="/oportunidades" element={ <Opportunities /> } />
             <Route path="/" element={<ItemListContainer greeting="Explora nuestro catálogo" />}/>
             <Route path="/categoria/:cat" element={<ItemListContainer />} />
             <Route path="/cat/:id" element={<ItemDetailContainer />} />

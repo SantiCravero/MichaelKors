@@ -10,11 +10,18 @@
   color: white;
   height: 95vh;
   width: 50%;
-  z-index: 49;
+  z-index: 3;
   position: relative;
   width: 50%;
   align-items: start;
   padding:0 85px;
+}
+
+@media all and (max-width: 900px){
+  .texto{
+    width: 80%;
+    height: 100vh;
+  }
 }
 
 .texto h1 {
@@ -23,7 +30,21 @@
 }
 
 .texto p{
-    font-family: 'Reem Kufi Fun', sans-serif;
+  font-family: 'Reem Kufi Fun', sans-serif;
+}
+
+@media all and (width <= 500px){
+  .texto{
+    width: 100%;
+    height: 100vh;
+    padding-top: 2.5rem;
+  }
+  .texto h1{
+    font-size: 2.2rem;
+  }
+  .texto p{
+    font-size: .8rem
+  }
 }
 
 .texto .cta {
