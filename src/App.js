@@ -11,6 +11,7 @@ import CheckOutForm from "./components/CheckOut/CheckOutForm/CheckOutForm";
 import CheckOut from "./components/CheckOut/CheckOut";
 import SingIn from "./components/SingIn/SingIn";
 import Opportunities from "./components/Opportunities/Opportunities";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
 
             <Route path="/singin" element={ <SingIn /> }/>
             <Route path="/oportunidades" element={ <Opportunities /> } />
+            <Route path="/contacto" element={<Contact /> } />
             <Route path="/" element={<ItemListContainer greeting="Explora nuestro catálogo" />}/>
             <Route path="/categoria/:cat" element={<ItemListContainer />} />
             <Route path="/cat/:id" element={<ItemDetailContainer />} />

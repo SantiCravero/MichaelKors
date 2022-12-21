@@ -13,6 +13,16 @@
   padding: 10px;
 }
 
+.init{
+  padding-left: 24px;
+}
+
+@media all and (max-width: 769px){
+  .init{
+    padding-left: 0
+  }
+}
+
 .effecto {
   display: inline-block;
   font-family: Verdana, sans-serif;
@@ -28,15 +38,19 @@
   padding: 10px;
 }
 
-.effecto:hover{
-  color: black;
+.effecto:hover {
+  color: #ca8a04;
+}
+
+.effecto > svg:hover{
+  fill: #ca8a04;
 }
 
 .effect:after {
   content: "";
   position: absolute;
   height: 1px;
-  background-color: black;
+  background-color: #ca8a04;
   width: 0;
   left: 50%;
   bottom: 0;
@@ -48,7 +62,7 @@
 }
 
 .effect:hover {
-  color: black;
+  color: #ca8a04;
 }
 
 .effect:hover:after {
@@ -122,7 +136,7 @@ body.open .burger {
   display: flex;
   align-items: center;
   gap: 4px;
-  padding: O 24px;
+  /* padding: 0 24px; */
   height: 100%;
   /* opacity: 0.6; */
   font-weight: 600;
@@ -142,9 +156,9 @@ body.open .burger {
 }
 
 @media (width >= 769px) {
-  .button {
+  /* .button {
     padding: 0 10px 0 24px;
-  }
+  } */
   .button > svg {
     display: block;
   }
@@ -172,8 +186,8 @@ body.open .burger {
   background: #0d0d0e;
   opacity: 0;
   visibility: hidden;
-  transition-property: opacity, visibility;
-  transition-duration: 0.7s;
+  /* transition-property: opacity, visibility; */
+  transition-duration: 0.5s;
 }
 
 @media (width < 769px) {
@@ -203,7 +217,7 @@ body.open .burger {
   .dropdown-menu {
     position: absolute;
     top: 60px;
-    left: 35px;
+    left: 20px;
     width: 180px;
     padding: 6px 15px 10px;
     margin-bottom: 0;

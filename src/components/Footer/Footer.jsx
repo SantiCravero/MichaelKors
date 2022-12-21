@@ -17,13 +17,13 @@ function Footer() {
                 <h2 className="title-font font-medium  text-white tracking-wider mb-3 uppercase">Sobre Michael Kors</h2>
                 <nav className="list-none mb-10">
                 <li>
-                    <Link to="#" className="cursor-pointer text-white hover:text-yellow-600 transition-all duration-200">Equipo</Link>
+                    <Link to="/" className="cursor-pointer text-white hover:text-yellow-600 transition-all duration-200">Inicio</Link>
                 </li>
                 <li>
-                    <Link to="#" className="cursor-pointer text-white hover:text-yellow-600 transition-all duration-200">Sobre Nosotros</Link>
+                    <Link to="/oportunidades" className="cursor-pointer text-white hover:text-yellow-600 transition-all duration-200">Trabajá con nosotros</Link>
                 </li>
                 <li>
-                    <Link to="#" className="cursor-pointer text-white hover:text-yellow-600 transition-all duration-200">Contácto</Link>
+                    <Link to="/contacto" className="cursor-pointer text-white hover:text-yellow-600 transition-all duration-200">Contácto</Link>
                 </li>
                 </nav>
             </div>

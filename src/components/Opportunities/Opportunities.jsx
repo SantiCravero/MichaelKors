@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
 function Opportunities() {
 
     const navigate = useNavigate()
+
+    useEffect(()=>{
+      window.scrollTo({top: 0, left: 0, behavior: "instant"})
+    },[])
 
     function handleSubmit(e){
         e.preventDefault()
@@ -216,16 +220,16 @@ function Opportunities() {
       <div className="bg-yellow-400">
           <div className="max-w-md mx-auto text-center py-16 px-4 sm:max-w-2xl sm:py-24 sm:px-6 lg:px-8 lg:py-32">
             <h2 className="text-3xl font-extrabold sm:text-4xl">
-              <span className="block text-white">Looking for a new career?</span>
-              <span className="block text-yellow-900">We’re hiring.</span>
+              <span className="block text-white">¿Buscas una nueva carrera?</span>
+              <span className="block text-yellow-900">Estamos contratando.</span>
             </h2>
             <Link
               to="#"
               className="text-yellow-500 font-semibold mt-8 w-full inline-flex items-center justify-center py-3 px-5 bg-white hover:bg-slate-50 border border-transparent rounded-md shadow-md text-base
               text-grape-600 hover:bg-grape-50 sm:w-auto"
             >
-              <span>See open positions</span>
-              <svg class="ml-3 h-5 w-5 flex-shrink-0 text-gray-400" x-description="Heroicon name: solid/external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <span>Ver posiciones abiertas</span>
+              <svg className="ml-3 h-5 w-5 flex-shrink-0 text-gray-400" x-description="Heroicon name: solid/external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
                 <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
             </svg>  
