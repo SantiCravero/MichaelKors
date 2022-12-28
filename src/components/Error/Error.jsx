@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import "./Error.css"
 
 function Error() {
-  window.scrollTo({top: 0, left: 0, behavior: "instant"})
+
+  useEffect(()=>{
+    window.scrollTo({top: 0, left: 0, behavior: "instant"})
+  },[])
+
   return (
-    <div className="fondo flex justify-center items-center">
+    <div className="back flex justify-center items-center">
         <div className='text-center'>
             <img src="/assets/MichaelKors.png" alt="Michael Kors" className='w-72 mx-auto my-10'/>
             <p className='text-yellow-500 text-basel'>404</p>

@@ -11,6 +11,59 @@ function Footer() {
   return (
     <>
     <footer className=" body-font">
+    <section aria-labelledby="perks-heading" className="border-t border-gray-200 bg-gray-50">
+      <div className="mx-auto max-w-7xl py-24 px-4 sm:px-6 sm:py-16 lg:px-8">
+        <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-0">
+          <div className="text-center md:flex md:items-start md:text-left lg:block lg:text-center">
+            <div className="md:flex-shrink-0">
+              <div className="flow-root">
+                <img className="-my-1 mx-auto h-24 w-auto" src="/assets/return.svg" alt=""/>
+              </div>
+            </div>
+            <div className="mt-6 md:mt-0 md:ml-4 lg:mt-6 lg:ml-0">
+              <h3 className="text-base font-medium text-gray-900">Devoluciones gratuitas</h3>
+              <p className="mt-3 text-sm text-gray-500">¿No es lo que esperabas? Vuelva a colocarlo en el paquete y adjunte el sello postal prepagado.</p>
+            </div>
+          </div>
+
+          <div className="text-center md:flex md:items-start md:text-left lg:block lg:text-center">
+            <div className="md:flex-shrink-0">
+              <div className="flow-root">
+                <img className="-my-1 mx-auto h-24 w-auto" src="/assets/delivery.svg" alt=""/>
+              </div>
+            </div>
+            <div className="mt-6 md:mt-0 md:ml-4 lg:mt-6 lg:ml-0">
+              <h3 className="text-base font-medium text-gray-900">Entrega el mismo día</h3>
+              <p className="mt-3 text-sm text-gray-500">Ofrecemos un servicio de entrega que nunca antes se había hecho. Pague hoy y reciba sus productos en cuestión de horas.</p>
+            </div>
+          </div>
+
+          <div className="text-center md:flex md:items-start md:text-left lg:block lg:text-center">
+            <div className="md:flex-shrink-0">
+              <div className="flow-root">
+                <img className="-my-1 mx-auto h-24 w-auto" src="/assets/code.svg" alt=""/>
+              </div>
+            </div>
+            <div className="mt-6 md:mt-0 md:ml-4 lg:mt-6 lg:ml-0">
+              <h3 className="text-base font-medium text-gray-900">Descuento todo el año</h3>
+              <p className="mt-3 text-sm text-gray-500">¿Buscando un trato? Usted puede utilizar el código &quot;AÑOMICHAEL&quot; en la caja y obtener dinero de descuento durante todo el año.</p>
+            </div>
+          </div>
+
+          <div className="text-center md:flex md:items-start md:text-left lg:block lg:text-center">
+            <div className="md:flex-shrink-0">
+              <div className="flow-root">
+                <img className="-my-1 mx-auto h-24 w-auto" src="/assets/mundo.svg" alt=""/>
+              </div>
+            </div>
+            <div className="mt-6 md:mt-0 md:ml-4 lg:mt-6 lg:ml-0">
+              <h3 className="text-base font-medium text-gray-900">Por el planeta</h3>
+              <p className="mt-3 text-sm text-gray-500">Hemos comprometido el 1% de las ventas a la preservación y restauración del entorno natural.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
         <div className="container px-24 py-8 mx-auto">
             <div className="flex flex-wrap lg:h-20 justify-center md:text-left text-center order-first">
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">

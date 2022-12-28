@@ -5,9 +5,9 @@ function Contact() {
 
   const navigate = useNavigate()
 
-  // useEffect(()=>{
-  //   window.scrollTo({top: 0, left: 0, behavior: "instant"})
-  // },[])
+  useEffect(()=>{
+    window.scrollTo({top: 0, left: 0, behavior: "instant"})
+  },[])
 
   function handleSubmit(e){
       e.preventDefault()
@@ -392,7 +392,7 @@ function Contact() {
             <div className="py-10 px-6 bg-gradient-to-l from-yellow-700 to-yellow-600 rounded-3xl sm:py-16 sm:px-12 lg:py-20 lg:px-20 lg:flex lg:items-center">
               <div className="lg:w-0 lg:flex-1">
                 <h2 className="text-3xl font-extrabold tracking-tight text-white">Suscribíte a nuestro newsletter</h2>
-                <p className="mt-4 max-w-3xl text-lg text-cyan-100">
+                <p className="mt-4 max-w-3xl text-lg text-gray-100">
                   Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui Lorem cupidatat commodo. Elit sunt
                   amet fugiat.
                 </p>
@@ -418,7 +418,7 @@ function Contact() {
                     Notificarme
                   </button>
                 </form>
-                <p className="mt-3 text-sm text-cyan-100">
+                <p className="mt-3 text-sm text-gray-100">
                   Nos preocupamos por la protección de tus datos. Lea nuestra{' '}
                   <a href="#" className="text-white font-medium underline">
                     Política de Privacidad.

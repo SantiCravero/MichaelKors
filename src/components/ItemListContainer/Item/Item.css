@@ -1,4 +1,4 @@
-.card {
+/* .card {
     width: 15rem;
     height: 25rem;
     padding: .8em;
@@ -70,5 +70,9 @@
    .card-button:hover {
     border: 1px solid rgb(206, 206, 206);
     background-color: rgb(206, 206, 206);
-   }
+   } */
+
+.oswald{
+    font-family: 'Oswald', sans-serif;
+}
    

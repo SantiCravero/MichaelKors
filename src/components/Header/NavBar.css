@@ -1,3 +1,13 @@
+@media all and (min-width: 769px){
+  .navbar{
+    transition: all 250ms;
+  }
+  
+  .navbar:hover{
+    height: 5.3rem;
+  }
+}
+
 .effect {
   display: inline-block;
   font-family: Verdana, sans-serif;
