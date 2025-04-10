@@ -5,8 +5,8 @@ import { useParams } from "react-router-dom"
 import BannerCategory from "./BannerCategory/BannerCategory";
 import { Ping } from '@uiball/loaders'
 import "./ItemListContainer.css"
-import ItemCat from "./ItemCat/ItemCat";
 import Main from "./Main/Main";
+import CategoryList from "./CategoryList/CategoryList";
 
 function ItemListContainer(props) {
   const [products, setProducts] = useState([]);
@@ -41,7 +41,7 @@ function ItemListContainer(props) {
   return (
     <>
     {banner === true ? <Banner /> : <BannerCategory cat={cat} />}
-    {main === true ? <Main products={products}/> : <div className="my-6 flex flex-wrap justify-center"><ItemCat products={products} /></div>}
+    {main === true ? <Main products={products}/> : <div className="my-6 flex flex-wrap justify-center"><CategoryList products={products} /></div>}
       {isLoading ? (
         <div className="loading flex items-center justify-center">
           <Ping size={150} lineWeight={3.5} speed={1.5} color="#CA8A04" />

@@ -16,9 +16,9 @@ const firebaseConfig = {
   apiKey: "AIzaSyBm7qDSCZwhSGjlZj7HAXPpVEjWaaEUcAA",
   authDomain: "michaelkors-aa681.firebaseapp.com",
   projectId: "michaelkors-aa681",
-  storageBucket: "michaelkors-aa681.appspot.com",
+  storageBucket: "michaelkors-aa681.firebasestorage.app",
   messagingSenderId: "1068047155218",
-  appId: "1:1068047155218:web:97f9f1494d129596d3d8cb",
+  appId: "1:1068047155218:web:97f9f1494d129596d3d8cb"
 };
 
 // Initialize Firebase

@@ -61,7 +61,7 @@ function NavBar() {
                 <Link to="/categoria/hombres" onClick={closeMenu} className="linkCat">Relojes de Hombres</Link>
                 <Link to="/categoria/mujeres" onClick={closeMenu} className="linkCat">Relojes de Mujeres</Link>
                 <Link to="/categoria/oro" onClick={closeMenu} className="linkCat">Relojes de Oro</Link>
-                <Link to="/categoria/" onClick={closeMenu} className="linkCat">Todos las colecciones</Link>
+                <Link to="/categoria/colecciones" onClick={closeMenu} className="linkCat">Todas las colecciones</Link>
               </div>
             </div>
 

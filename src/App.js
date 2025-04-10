@@ -12,6 +12,8 @@ import CheckOut from "./components/CheckOut/CheckOut";
 import SingIn from "./components/SingIn/SingIn";
 import Opportunities from "./components/Opportunities/Opportunities";
 import Contact from "./components/Contact/Contact";
+import BannerCategory from "./components/ItemListContainer/BannerCategory/BannerCategory";
+import CategoryList from "./components/ItemListContainer/CategoryList/CategoryList";
 
 function App() {
   return (
@@ -26,6 +28,7 @@ function App() {
             <Route path="/contacto" element={<Contact /> } />
             <Route path="/" element={<ItemListContainer greeting="Explora nuestro catálogo" />}/>
             <Route path="/categoria/:cat" element={<ItemListContainer />} />
+            <Route path="/categoria/colecciones" element={<BannerCategory />} />
             <Route path="/cat/:id" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<CartView />} />
 
