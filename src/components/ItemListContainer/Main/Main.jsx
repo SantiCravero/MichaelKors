@@ -33,7 +33,7 @@ function Main({products}) {
           <div className="relative overflow-hidden rounded-lg">
             <div className="absolute inset-0">
               <img
-                src="https://tailwindui.com/img/ecommerce-images/home-page-01-feature-section-01.jpg"
+                src="/assets/nivel.jpg"
                 alt=""
                 className="h-full w-full object-cover object-center"
               />
